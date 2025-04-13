@@ -6,18 +6,30 @@ export default function SuperBerry() {
   const tasks = [
     {
       text: "Designed and developed a customizable static web application using ReactJS, Tailwind CSS v1, and TypeScript, focusing on user-friendliness and customization.",
-      keywords: ["ReactJS", "TailwindCSS v1", "TypeScript", "customizable", "user-friendly"],
+      keywords: [
+        "ReactJS",
+        "TailwindCSS v1",
+        "TypeScript",
+        "customizable",
+        "user-friendly",
+      ],
     },
     {
       text: "Upgraded the application to enhance SEO and performance by migrating to Next.js, utilizing server-side rendering for faster load times and improved visibility.",
       keywords: ["Next.js", "SEO", "server-side rendering", "performance"],
     },
     {
-      text: "Provided technical support for web applications, troubleshooting errors and problems, and transformed a PHP website into a high-performance static site on Next.js, enhancing Google Lighthouse scores.",
-      keywords: ["technical support", "troubleshooting", "PHP", "high-performance", "Google Lighthouse"],
+      text: "Provided technical support and debugging for MERN-based web applications, resolving performance issues and transforming the project into a high-performance Next.js application with improved Lighthouse scores.",
+      keywords: [
+        "technical support",
+        "debugging",
+        "MERN",
+        "Next.js",
+        "performance",
+        "Google Lighthouse",
+      ],
     },
-];
-
+  ];
 
   return (
     <>
@@ -25,10 +37,13 @@ export default function SuperBerry() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-          Full Stack Engineer <span className="text-AAsecondary">@ Web App</span>
+            Full Stack Engineer{" "}
+            <span className="text-AAsecondary">@ Web App</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">June - Dec 2020</span>
+          <span className="font-mono text-xs text-gray-500">
+            May - Nov 2022
+          </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
           {/* Tasks Description 1 */}
@@ -39,7 +54,10 @@ export default function SuperBerry() {
                 <span
                   className="text-gray-500 sm:text-sm text-xs"
                   dangerouslySetInnerHTML={{
-                    __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
+                    __html: getTasksTextWithHighlightedKeyword(
+                      item.text,
+                      item.keywords
+                    ),
                   }}
                 ></span>
               </div>

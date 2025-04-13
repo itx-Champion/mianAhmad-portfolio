@@ -5,22 +5,44 @@ import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 export default function AdvancedAgroManagement() {
   const tasks = [
     {
-      text: "Developed a responsive and customizable website for Advanced Agro Management using HTML, CSS, JavaScript, and PHP.",
-      keywords: ["Advanced Agro Management", "responsive", "customizable"],
+      text: "Designed and developed full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), focusing on scalability and modular code architecture.",
+      keywords: [
+        "MERN stack",
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "full-stack",
+      ],
     },
     {
-      text: "Monitored website performance and troubleshot WordPress issues, utilizing tools like W3 Total Cache for optimization.",
-      keywords: ["performance monitoring", "WordPress", "W3 Total Cache", "troubleshooting"],
+      text: "Integrated RESTful APIs for seamless communication between frontend and backend services, utilizing tools like Postman for testing and debugging.",
+      keywords: [
+        "RESTful APIs",
+        "Postman",
+        "frontend-backend integration",
+        "debugging",
+      ],
     },
     {
-      text: "Managed the backend of the company's WordPress website with Oracle Database, employing WP-CLI, phpMyAdmin, and custom plugins to enhance functionality.",
-      keywords: ["Oracle Database", "WP-CLI", "phpMyAdmin", "custom plugins"],
+      text: "Implemented user authentication and authorization using JSON Web Tokens (JWT) and Bcrypt for secure login systems.",
+      keywords: [
+        "JWT",
+        "Bcrypt",
+        "authentication",
+        "authorization",
+        "security",
+      ],
     },
     {
-      text: "Implemented SEO optimizations and monitored site metrics using Google Analytics to ensure high performance and user engagement.",
-      keywords: ["SEO", "Google Analytics", "user engagement"],
+      text: "Built complex data models and managed database queries using Mongoose in MongoDB, ensuring efficient CRUD operations and optimized indexing.",
+      keywords: ["Mongoose", "MongoDB", "data modeling", "CRUD operations"],
     },
-];
+    {
+      text: "Utilized Redux Toolkit for efficient state management in React applications, improving performance and maintainability.",
+      keywords: ["Redux Toolkit", "state management", "React performance"],
+    },
+  ];
 
   return (
     <>
@@ -28,10 +50,13 @@ export default function AdvancedAgroManagement() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-          Full Stack Web Developer <span className="text-AAsecondary">@ Web Development</span>
+            Full Stack Web Developer{" "}
+            <span className="text-AAsecondary">@ Web Development</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">Oct 18 - May 2019</span>
+          <span className="font-mono text-xs text-gray-500">
+            Jan 18 -May 2022{" "}
+          </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
           {/* Tasks Description 1 */}
@@ -42,7 +67,10 @@ export default function AdvancedAgroManagement() {
                 <span
                   className="text-gray-500 sm:text-sm text-xs"
                   dangerouslySetInnerHTML={{
-                    __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
+                    __html: getTasksTextWithHighlightedKeyword(
+                      item.text,
+                      item.keywords
+                    ),
                   }}
                 ></span>
               </div>

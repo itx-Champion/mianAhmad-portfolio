@@ -14,8 +14,6 @@
   </a>
 </p>
 
-## ![demo](https://user-images.githubusercontent.com/62770500/199337431-d632cc3c-12fb-40db-8f96-0d5e55555579.png)
-
 ## 🚨 About this repo (please read!)
 
 ### 🚀 Latest Update
@@ -147,13 +145,13 @@ the following endpoint will return a json object contains a bunch of information
 example :
 
 ```api
-    /api/userInfoByIP/159.89.173.104
+   /api/userInfoByIP/39.50.90.122
 ```
 
 ###### **_Get Request to above endpoint will return the following json data :_**
 
 ```JavaScript
-    {"zip":"560002","country":"India","countryCode":"IN","region":"KA","regionName":"Karnataka","city":"Bengaluru","datetime":"9/6/2022, 1:24:30 AM","lat":12.9634,"lon":77.5855,"timezone":"Asia/Kolkata","isp":"DigitalOcean, LLC","org":"Digital Ocean","as":"AS14061 DigitalOcean, LLC","query":"159.89.173.104"}
+           {"zip":"56300","country":"Pakistan","countryCode":"PK","region":"PB","regionName":"Punjab","city":"Okara","datetime":"4/13/2025, 3:30:00 PM","lat":30.8081,"lon":73.4458,"timezone":"Asia/Karachi","isp":"PTCL","org":"Pakistan Telecommunication Company","as":"AS45595 Pakistan Telecom Company Limited","query":"39.50.90.122"}
 ```
 
 ##### Endpoint 2 :
@@ -167,13 +165,13 @@ the following endpoint will return a json object contains the zip code for the l
 example :
 
 ```api
-    /api/userInfoByIP/159.89.173.104
+    /api/userInfoByLatLon/31.5497/74.3436
 ```
 
 ###### **_Get Request to above endpoint will return the zipcode of the lat and long provided :_**
 
 ```JavaScript
-    {"zipcode" : "56998"}
+    {"zipcode" : "56300"}
 ```
 
 ###### **_the Response below is returned if the lat and long provided has no zip code in Google maps, like lat & long in positioned in the ocean :_**

@@ -47,8 +47,8 @@ export default function AboutMe(props) {
             <div className="font-Header text-justify">
               <span className="text-gray-400 ">
                 Hello! My name is{" "}
-                <span className="text-AAsecondary">Mian Ahmad</span>, and I'm a
-                dedicated{" "}
+                <span className="text-AAsecondary">Mian Ahmad</span>, and
+                I&apos;m a dedicated{" "}
                 <span className="text-AAsecondary">
                   Full Stack MERN Developer
                 </span>{" "}
@@ -71,8 +71,8 @@ export default function AboutMe(props) {
                   MongoDB, Express.js, React.js, and Node.js
                 </span>
                 , delivering end-to-end solutions from front-end interfaces to
-                back-end logic and API integrations. I've collaborated with both
-                startups and teams, contributing to products in{" "}
+                back-end logic and API integrations. I&apos;ve collaborated with
+                both startups and teams, contributing to products in{" "}
                 <span className="text-AAsecondary">e-commerce</span>,{" "}
                 <span className="text-AAsecondary">portfolio platforms</span>,
                 and <span className="text-AAsecondary">custom CMS systems</span>

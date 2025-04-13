@@ -66,7 +66,7 @@ export default function Home() {
     if (!IsBlackListEmpty) {
       if (userData) {
         // check if the user country is in the blackList
-        if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES.includes(userData.country)) {
+        if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES?.includes(userData.country)) {
           // set isBlackListed to true
           setIsBlackListed(true);
         }
@@ -107,8 +107,9 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Abdellatif Anaflous - Software Engineer",
-    description: `I've been working on Software development for 5 years straight. Get in touch with me to know more.`,
+    title: "Mian Ahmad - Mern Stack Developer",
+    keywords: "Mern Stack Developer, Software Engineer, Web Developer, React Developer",
+    description: `I've been working on Mern Stack development for 3 years straight. Get in touch with me to know more.`,
     image: "/titofCercle.png",
     type: "website",
   };
@@ -120,15 +121,15 @@ export default function Home() {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://anaflous.com`} />
-        <link rel="canonical" href={`https://anaflous.com`} />
+        <meta property="og:url" content={`https://mianAhmad.com`} />
+        <link rel="canonical" href={`https://mianAhmad.com`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:site_name" content="Mian Ahmad" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@titofabdo" />
+        <meta name="twitter:site" content="@mianAhmadPortfolio" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
@@ -136,17 +137,41 @@ export default function Home() {
 
       {!isBlackListed ? (
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
-          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
-          <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
+          {context.sharedState.finishedLoading ? (
+            <></>
+          ) : ShowThisCantBeReached ? (
+            <ThisCantBeReached />
+          ) : (
+            <></>
+          )}
+          {context.sharedState.finishedLoading ? (
+            <></>
+          ) : ShowElement ? (
+            <Startup />
+          ) : (
+            <></>
+          )}
+          <Header
+            finishedLoading={context.sharedState.finishedLoading}
+            sectionsRef={homeRef}
+          />
           <MyName finishedLoading={context.sharedState.finishedLoading} />
-          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} />
-          {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
+          <SocialMediaArround
+            finishedLoading={context.sharedState.finishedLoading}
+          />
+          {context.sharedState.finishedLoading ? (
+            <AboutMe ref={aboutRef} />
+          ) : (
+            <></>
+          )}
           {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
           {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />
+            <Footer
+              githubUrl={"https://github.com/itx-Champion/mianAhmad-portfolio"}
+              hideSocialsInDesktop={true}
+            />
           ) : (
             <></>
           )}

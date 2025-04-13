@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     rotate: {
       "-180": "-180deg",
@@ -30,6 +33,8 @@ module.exports = {
         StartupBackground: "#020c1b",
       },
       screens: {
+        xs: "480px",
+        // => @media (min-width: 480px) { ... }
         sm: "640px",
         // => @media (min-width: 640px) { ... }
 

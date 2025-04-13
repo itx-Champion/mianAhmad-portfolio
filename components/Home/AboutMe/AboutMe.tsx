@@ -3,11 +3,21 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const technologies = [
-    ["Nextjs/React", "TypeScript/JavaScript", "Tailwind CSS", "Ether.js/web3.js", "AWS/Google Cloud"],
-    ["Node.js", "Java", "Solidity", "Mongodb", "GraphQL/RESTful APIs"],
+    [
+      "Nextjs/React",
+      "TypeScript/JavaScript",
+      "Tailwind CSS",
+      "Redux/Redux Toolkit",
+      "AWS/Google Cloud",
+    ],
+    ["Node.js", "Express.js", "Mongodb", "Firebase", "GraphQL/RESTful APIs"],
   ];
   return (
-    <div id="aboutSection" data-aos="fade-up" className="snap-start flex flex-col  items-center py-20 bg-AAprimary">
+    <div
+      id="aboutSection"
+      data-aos="fade-up"
+      className="snap-start flex flex-col  items-center py-20 bg-AAprimary"
+    >
       {/* // ? 0.1 About Me */}
       <div
         className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px] 
@@ -15,8 +25,15 @@ export default function AboutMe(props) {
       >
         <div className="flex flex-row items-center ">
           <div className="flex flex-row  items-center mr-4">
-            <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"} />
-            <span className="text-AAsecondary font-Header text-sm  sm:text-xl"> 01.</span>
+            <ArrowIcon
+              className={
+                "flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"
+              }
+            />
+            <span className="text-AAsecondary font-Header text-sm  sm:text-xl">
+              {" "}
+              01.
+            </span>
             <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider text-lg sm:text-2xl pl-4">
               About Me
             </span>
@@ -29,42 +46,68 @@ export default function AboutMe(props) {
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
             <div className="font-Header text-justify">
               <span className="text-gray-400 ">
-                Hello! My name is Abdellatif, and I&apos;m a passionate{" "}
-                <span className="text-AAsecondary">Lead Full Stack Software Engineer</span> with strong problem-solving skills. My
-                journey in computer science started at 11 years old when I explored Ethical Hacking using BackTrack OS,
-                which started my interest in programming. Over the years, I continued to teach myself coding, which led
-                me to pursue an <span className="text-AAsecondary">engineering degree</span> and afterward a second
-                degree in <span className="text-AAsecondary">Master of Computer Science</span>, making me a professional
-                in this field.
-              </span>
-            </div>
-            <div className="font-Header text-justify">
-              <span className="text-gray-400 ">
-                Throughout my education and career, from my self-learning days to earning my degrees, I&apos;ve gained
-                experience in various industries. I have had the opportunity to work with companies and startups,
-                including <span className="text-AAsecondary">Vision</span>,{" "}
-                <span className="text-AAsecondary">FeverTokens</span>,{" "}
-                <span className="text-AAsecondary">TrouveTavoi</span>, and many others, including transportation and
-                international companies. At FeverTokens, I led the development of an innovative NFT marketplace, and at
-                Vision, which is the <span className="text-AAsecondary">second-largest market</span> in the world for{" "}
-                <span className="text-AAsecondary">ENS</span>, I led the development of their new NameWrapper release.
+                Hello! My name is{" "}
+                <span className="text-AAsecondary">Mian Ahmad</span>, and I'm a
+                dedicated{" "}
+                <span className="text-AAsecondary">
+                  Full Stack MERN Developer
+                </span>{" "}
+                with over{" "}
+                <span className="text-AAsecondary">
+                  3 years of hands-on experience
+                </span>{" "}
+                in building scalable and performant web applications. My journey
+                in development began with a deep curiosity for technology, which
+                soon evolved into a passion for creating impactful digital
+                solutions.
               </span>
             </div>
 
-            <div className="font-Header tracking-wide text-justify ">
-              <span className="text-gray-400  ">
-                I&apos;m always interested to keep learning and improve my skills to make a positive impact in the tech
-                world. Here are some of the technologies I&apos;ve been working with :{" "}
+            <div className="font-Header text-justify">
+              <span className="text-gray-400 ">
+                Over the years, I’ve worked on a variety of professional
+                projects involving{" "}
+                <span className="text-AAsecondary">
+                  MongoDB, Express.js, React.js, and Node.js
+                </span>
+                , delivering end-to-end solutions from front-end interfaces to
+                back-end logic and API integrations. I've collaborated with both
+                startups and teams, contributing to products in{" "}
+                <span className="text-AAsecondary">e-commerce</span>,{" "}
+                <span className="text-AAsecondary">portfolio platforms</span>,
+                and <span className="text-AAsecondary">custom CMS systems</span>
+                . My focus is always on writing clean, maintainable code and
+                developing smooth, responsive user experiences.
               </span>
             </div>
+
+            <div className="font-Header tracking-wide text-justify">
+              <span className="text-gray-400 ">
+                I’m passionate about continuous learning, and I stay updated
+                with modern technologies like{" "}
+                <span className="text-AAsecondary">React Query</span>,{" "}
+                <span className="text-AAsecondary">Tailwind CSS</span>,{" "}
+                <span className="text-AAsecondary">Redux Toolkit</span>, and{" "}
+                <span className="text-AAsecondary">Framer Motion</span> to build
+                production-ready applications. My goal is to keep pushing the
+                boundaries of what I can do with MERN stack and contribute to
+                building innovative, high-performance web applications.
+              </span>
+            </div>
+
             <div className="font-Header tracking-wide flex flex-row space-x-16  justify-center lg:justify-start">
               <div className="flex flex-row space-x-2 items-center">
                 <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {technologies[0].map((tech, index) => {
                     return (
-                      <div key={index} className="flex flex-row items-center space-x-2">
+                      <div
+                        key={index}
+                        className="flex flex-row items-center space-x-2"
+                      >
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-sm text-xs">{tech}</span>
+                        <span className="text-gray-400 sm:text-sm text-xs">
+                          {tech}
+                        </span>
                       </div>
                     );
                   })}
@@ -74,9 +117,14 @@ export default function AboutMe(props) {
                 <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {technologies[1].map((tech, index) => {
                     return (
-                      <div key={index} className="flex flex-row items-center space-x-2">
+                      <div
+                        key={index}
+                        className="flex flex-row items-center space-x-2"
+                      >
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-sm text-xs">{tech}</span>
+                        <span className="text-gray-400 sm:text-sm text-xs">
+                          {tech}
+                        </span>
                       </div>
                     );
                   })}
@@ -95,7 +143,7 @@ export default function AboutMe(props) {
             <div className="absolute w-5/6 h-5/6  rounded overflow-hidden">
               <div className="absolute w-full h-full group-hover:opacity-0 bg-AAsecondary opacity-10 duration-300 rounded overflow-hidden"></div>
               <Img
-                src={"/img/Portfolio-portrait-3.jpg"}
+                src={"/img/myPic.jpg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />
@@ -106,7 +154,7 @@ export default function AboutMe(props) {
             <div className="absolute w-48 h-full  rounded  translate-x-5 translate-y-5 border-2 border-AAsecondary"></div>
             <div className="absolute w-48 h-full rounded overflow-hidden">
               <Img
-                src={"/img/Portfolio-portrait-3.jpg"}
+                src={"/img/myPic.jpg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />

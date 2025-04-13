@@ -25,9 +25,9 @@ export default function Maintenance() {
             No problem contact me on{" "}
             <a
               className="text-white underline"
-              href="mailto:abdellatif@anaflous.com?subject=Hello%20World&body=Body%20of%20the%20email"
+              href="mailto:ahmadsharif965@gmail.com?subject=Hello%20Mian%20Ahmad&body=I%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect!"
             >
-              abdellatif@anaflous.com
+              ahmadsharif965@gmail.com
             </a>
           </p>
         </div>

@@ -9,17 +9,17 @@ export const CookieTimeCounter = ({
 }) => {
   if (typeof window != undefined) {
     // Cookie existence verification
-    if (cookieCutter.get("timer-sec-units")) {
+    if (cookieCutter?.get("timer-sec-units")) {
       console.log(
         "current cookie timer-sec-units value in useEffect: ",
-        cookieCutter.get("timer-sec-units")
+        cookieCutter?.get("timer-sec-units")
       );
     } else {
       console.log("timer cookie not exist");
-      cookieCutter.set("timer-sec-units", String("0"));
-      cookieCutter.set("timer-sec-tens", String("0"));
-      cookieCutter.set("timer-min-units", String("0"));
-      cookieCutter.set("timer-min-tens", String("0"));
+      cookieCutter?.set("timer-sec-units", String("0"));
+      cookieCutter?.set("timer-sec-tens", String("0"));
+      cookieCutter?.set("timer-min-units", String("0"));
+      cookieCutter?.set("timer-min-tens", String("0"));
     }
     // set setInterval for the context.sharedState.userdata.timerCookieRef
     context.sharedState.userdata.timerCookieRef.current = setInterval(
@@ -84,7 +84,7 @@ export const MouseWindowEventListners = ({
   };
   // assint mousePositionTracker.current here to use in the as fallback function for the event
   // and to remove the event in the other pages
-  context.sharedState.userdata.mousePositionTracker.current = event => {
+  context.sharedState.userdata.mousePositionTracker.current = (event) => {
     if (mouseX.current) {
       mouseX.current.innerText = String(event.pageX);
       mouseY.current.innerText = String(event.pageY);
@@ -122,14 +122,14 @@ export const userInfo = async ({
   // this api will return current ip address of the requester
   const IP_Address = async () => {
     return fetch("https://api.ipify.org/?format=json")
-      .then(res => res.json())
-      .then(data => data.ip);
+      .then((res) => res.json())
+      .then((data) => data.ip);
   };
   // call api by passing the IP address of the requester & store in api_data
   const api_data = async () => {
     return fetch("/api/userInfoByIP/" + (await IP_Address()))
-      .then(res => res.json())
-      .then(data => data);
+      .then((res) => res.json())
+      .then((data) => data);
   };
   //to determine the browser info
   const browser = detect();
@@ -155,7 +155,7 @@ export const userInfo = async ({
   if (navigator) {
     if (navigator.hasOwnProperty("getBattery")) {
       //@ts-ignore
-      navigator.getBattery().then(battery => {
+      navigator.getBattery().then((battery) => {
         result["batteryLevel"] = battery.level + " %";
         console.log("battery level : ", battery.level + " %");
       });
@@ -213,8 +213,8 @@ export const onClickUpdateLocation = async (
     // call the api by passing new lat and lon
     const api_get_zip = async (lat, lon) => {
       return fetch("/api/userInfoByLatLon/" + lat + "/" + lon)
-        .then(res => res.json())
-        .then(data => {
+        .then((res) => res.json())
+        .then((data) => {
           return data;
         });
     };

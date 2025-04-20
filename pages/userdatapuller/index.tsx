@@ -1,4 +1,4 @@
-import React, { useContext,useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import cookieCutter from "cookie-cutter";
@@ -84,18 +84,26 @@ export default function Page() {
 
   // useEffect to clear others projects
   useEffect(() => {
-  // remove the interval Cookie timer setter when
-  if (typeof window !== "undefined") {
-    // remove Typing project EventListeners
-    window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
-    document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
-    // remove Portfolio project NavBar EventListeners
-    window.removeEventListener("scroll", context.sharedState.portfolio.NavBar.IntervalEvent);
-    context.sharedState.portfolio.NavBar.IntervalEvent = null;
-    context.sharedState.portfolio.NavBar.scrolling = null;
-    context.sharedState.portfolio.NavBar.scrollSizeY = null;
-
-  }
+    // remove the interval Cookie timer setter when
+    if (typeof window !== "undefined") {
+      // remove Typing project EventListeners
+      window.removeEventListener(
+        "resize",
+        context.sharedState.typing.eventInputLostFocus
+      );
+      document.removeEventListener(
+        "keydown",
+        context.sharedState.typing.keyboardEvent
+      );
+      // remove Portfolio project NavBar EventListeners
+      window.removeEventListener(
+        "scroll",
+        context.sharedState.portfolio.NavBar.IntervalEvent
+      );
+      context.sharedState.portfolio.NavBar.IntervalEvent = null;
+      context.sharedState.portfolio.NavBar.scrolling = null;
+      context.sharedState.portfolio.NavBar.scrollSizeY = null;
+    }
   }, [context.sharedState]);
 
   // import Dynamically the Map component from the DataPuller package, cus it's using some client side objects
@@ -133,7 +141,7 @@ export default function Page() {
               </div>
               <table className="border-2 border-gray-300 w-full font-mono">
                 <tbody>
-                  {tableData(userData, zipCode).map((item, index) => {
+                  {tableData(userData, zipCode)?.map((item, index) => {
                     return <TableRow item={item} key={index} />;
                   })}
                 </tbody>
@@ -147,13 +155,13 @@ export default function Page() {
               <section className="flex flex-col lg:flex-row lg:space-y-0 space-y-3 lg:space-x-4 font-mono">
                 {/* // ? Additional Information Section 1*/}
                 <div className="flex-none flex-col space-y-3 ">
-                  {Additional_data(userData, gpuTier).map((item, index) => {
+                  {Additional_data(userData, gpuTier)?.map((item, index) => {
                     return (
                       <BlockElem
                         key={index}
                         size="32"
-                        title={item.title}
-                        value={item.value}
+                        title={item?.title}
+                        value={item?.value}
                       />
                     );
                   })}
@@ -302,7 +310,10 @@ export default function Page() {
         {/* // ? About */}
         <About />
       </div>
-      <Footer githubUrl="https://github.com/hktitof/DataPuller" hideSocialsInDesktop={false} />
+      <Footer
+        githubUrl="https://github.com/itx-Champion"
+        hideSocialsInDesktop={false}
+      />
     </>
   );
 }
